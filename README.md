@@ -63,11 +63,14 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+received a 500 internal server error, for an unitialized constatnt 'Toys'. looked at the location rb:10 and the constat was spelled wrong (Toys > Toy)
 
 - Update the number of likes for a toy
 
   - How I debugged:
+seems that the unitialized constant 'Toys' also affected the likes function. now works!
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  route not mapped in routes.rb? correct! needed to add ':destroy' into the "only:" hash on routes.rb
